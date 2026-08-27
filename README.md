@@ -1,17 +1,17 @@
-# 牛来 GPT 宠物操作手册
+# 牛来 宠物操作手册
 
 版本：1.0  
 适用日期：2026-08-27  
-宠物名称：牛来 GPT  
-宠物 ID：`niulai-gpt`
+宠物名称：牛来  
+宠物 ID：`niulai`
 
-> 说明：OpenAI 当前公开文档中未提供本地自定义宠物的完整规范。本手册依据这台 Mac 上现有 Codex/ChatGPT 桌面版的实际界面与本地加载规则整理，并已对“牛来 GPT”宠物包进行验证。应用更新后，入口名称或格式可能发生变化。
+> 说明：OpenAI 当前公开文档中未提供本地自定义宠物的完整规范。本手册依据这台 Mac 上现有 Codex/ChatGPT 桌面版的实际界面与本地加载规则整理，并已对“牛来”宠物包进行验证。应用更新后，入口名称或格式可能发生变化。
 
 ## 一、快速启用
 
 1. 完全退出并重新打开 Codex/ChatGPT 桌面应用。
 2. 打开“设置”，进入 **Pets（宠物）**。
-3. 在 **Pick a pet（选择宠物）** 中找到 **牛来 GPT**，点击 **Select（选择）**。
+3. 在 **Pick a pet（选择宠物）** 中找到 **牛来**，点击 **Select（选择）**。
 4. 点击 **Wake Pet（唤醒宠物）**，宠物会出现在桌面浮层中。
 5. 在 **Pet size（宠物大小）** 滑杆中调整显示尺寸。
 
@@ -61,14 +61,14 @@
 - **Select**：切换到指定宠物。
 - **Create**：进入新宠物创建流程。
 
-“牛来 GPT”已经针对默认宠物浮层制作，不需要修改应用本体或 `app.asar`。
+“牛来”已经针对默认宠物浮层制作，不需要修改应用本体或 `app.asar`。
 
 ## 四、宠物文件与备份
 
 当前安装位置：
 
 ```text
-~/.codex/pets/niulai-gpt/
+~/.codex/pets/niulai/
 ├── pet.json
 └── spritesheet.webp
 ```
@@ -76,15 +76,15 @@
 - `pet.json`：名称、介绍、精灵表版本和图片路径。
 - `spritesheet.webp`：全部动作帧，带透明背景。
 
-备份时，把整个 `niulai-gpt` 文件夹复制到其他位置即可。恢复时，将完整文件夹放回 `~/.codex/pets/`，然后点击 **Refresh** 或重启应用。
+备份时，把整个 `niulai` 文件夹复制到其他位置即可。恢复时，将完整文件夹放回 `~/.codex/pets/`，然后点击 **Refresh** 或重启应用。
 
-请不要只复制其中一个文件，也不要让目录变成 `~/.codex/pets/某文件夹/niulai-gpt/` 这种多套一层的结构；应用只扫描 `pets` 目录下的直接子文件夹。
+请不要只复制其中一个文件，也不要让目录变成 `~/.codex/pets/某文件夹/niulai/` 这种多套一层的结构；应用只扫描 `pets` 目录下的直接子文件夹。
 
 ## 五、更新与卸载
 
 ### 更新形象
 
-1. 先备份整个 `niulai-gpt` 文件夹。
+1. 先备份整个 `niulai` 文件夹。
 2. 替换 `spritesheet.webp`；文件名不变时无须修改 `pet.json`。
 3. 在设置中点击 **Refresh**，必要时完全退出并重启应用。
 
@@ -94,14 +94,14 @@
 
 1. 先使用 **Tuck Away Pet** 收起宠物。
 2. 通过 **Open folder** 打开宠物目录。
-3. 将 `niulai-gpt` 文件夹移出 `pets` 目录；如需保留，建议移动到备份目录，不要直接删除。
+3. 将 `niulai` 文件夹移出 `pets` 目录；如需保留，建议移动到备份目录，不要直接删除。
 4. 点击 **Refresh** 或重启应用。
 
 ## 六、故障排查
 
-### 找不到“牛来 GPT”
+### 找不到“牛来”
 
-1. 确认目录是 `~/.codex/pets/niulai-gpt/`，没有多套一层文件夹。
+1. 确认目录是 `~/.codex/pets/niulai/`，没有多套一层文件夹。
 2. 确认其中同时存在 `pet.json` 与 `spritesheet.webp`。
 3. 在设置 → Pets 中点击 **Refresh**。
 4. 仍未出现时，完全退出并重新打开桌面应用。
@@ -130,8 +130,8 @@
 
 ```json
 {
-  "id": "niulai-gpt",
-  "displayName": "牛来 GPT",
+  "id": "niulai",
+  "displayName": "牛来",
   "description": "An uncanny yellow calf GPT pet with slanted brows, a pale muzzle, and a tiny green status tag; it works with deadpan determination.",
   "spriteVersionNumber": 1,
   "spritesheetPath": "spritesheet.webp"
